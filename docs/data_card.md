@@ -6,17 +6,17 @@
 - **Primary Source:** Central Pollution Control Board (CPCB), Ministry of Environment, Forest and Climate Change, Government of India
 - **Distribution Portal:** Kaggle ("Air Quality Data in India" by rohanrao) / National Data and Analytics Platform (NDAP)
 - **Source URL:** https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india
-- **Download Date:** [TO BE FILLED BY STUDENT UPON DOWNLOAD - e.g. 2026-10-14]
+- **Download Date:** 2026-10-13
 - **File Name:** `city_day.csv`
-- **File Size:** ~2.1 MB
-- **SHA-256 Checksum:** `[TO BE FILLED BY STUDENT - Run: certutil -hashfile data/raw/city_day.csv SHA256]`
-- **License / Terms of Use:** Data open under CC0: Public Domain / Open Government Data (OGD) Platform India terms. (Verify exact terms on source page).
+- **File Size:** 2,574,056 bytes (~2.57 MB)
+- **SHA-256 Checksum:** `0d84b21c3e4878bbad8df362f2ab05f61ad959538dddf5918e714077ed3c1847`
+- **License / Terms of Use:** CC0: Public Domain / Open Government Data (OGD) Platform India terms.
 
 ### Collection Method & Measurement Provenance
 - **Monitoring Infrastructure:** Automated Continuous Ambient Air Quality Monitoring Stations (CAAQMS) operated by CPCB and respective State Pollution Control Boards (SPCBs).
 - **Temporal Resolution:** Originally collected as hourly readings across localized stations, aggregated into 24-hour city-level daily averages.
 - **Geographic Coverage:** 26 major Indian cities (including Bengaluru, Delhi, Mumbai, Kolkata, Chennai, Hyderabad, Ahmedabad, Patna, etc.).
-- **Temporal Span:** January 1, 2015 to July 1, 2020 (~2,009 days).
+- **Temporal Span:** January 1, 2015 to July 1, 2020 (2,009 calendar days).
 - **Known vs. Unknown:**
   - *Known:* Station sensors use standard optical / chemiluminescent / beta-attenuation techniques specified by CPCB protocols.
   - *Unknown:* Specific sensor-level calibration schedules, historical sensor replacement dates, and the exact station weighting used when computing citywide averages.
@@ -25,35 +25,38 @@
 
 ## 2. Dataset Dimensions & Summary
 
-- **Total Records (Rows):** ~29,531 rows
+- **Total Records (Rows):** 29,531 rows
 - **Total Features (Columns):** 16 columns
+- **Distinct Cities:** 26 cities
+- **Date Range:** 2015-01-01 to 2020-07-01
 - **Observation Frequency:** Daily per city
+- **Duplicate (City, Date) Records:** 0
 - **Target Variables:**
-  - `AQI` (Numeric, Continuous, range: 0–500+)
-  - `AQI_Bucket` (Categorical, 6 classes per CPCB standard)
+  - `AQI` (Numeric, Continuous, range: 13.0 to 2049.0; 4,681 missing / 15.85%)
+  - `AQI_Bucket` (Categorical, 6 classes per CPCB standard; 4,681 missing / 15.85%)
 
 ---
 
 ## 3. Data Dictionary
 
-| Column Name | Data Type | Physical Unit | Description | Expected % Missing (Approx) |
-|---|---|---|---|---|
-| `City` | Categorical / String | N/A | Name of the Indian city | 0.0% |
-| `Date` | Date (`YYYY-MM-DD`) | N/A | Observation date (calendar day) | 0.0% |
-| `PM2.5` | Float | $\mu g/m^3$ | Fine particulate matter ($\le 2.5 \mu m$) | ~15% |
-| `PM10` | Float | $\mu g/m^3$ | Respirable particulate matter ($\le 10 \mu m$) | ~38% |
-| `NO` | Float | $\mu g/m^3$ | Nitric Oxide | ~12% |
-| `NO2` | Float | $\mu g/m^3$ | Nitrogen Dioxide | ~12% |
-| `NOx` | Float | $ppb$ / $\mu g/m^3$ | Nitrogen Oxides (total) | ~14% |
-| `NH3` | Float | $\mu g/m^3$ | Ammonia | ~35% |
-| `CO` | Float | $mg/m^3$ | Carbon Monoxide | ~7% |
-| `SO2` | Float | $\mu g/m^3$ | Sulphur Dioxide | ~13% |
-| `O3` | Float | $\mu g/m^3$ | Ground-level Ozone | ~14% |
-| `Benzene` | Float | $\mu g/m^3$ | Benzene volatile organic compound | ~19% |
-| `Toluene` | Float | $\mu g/m^3$ | Toluene volatile organic compound | ~27% |
-| `Xylene` | Float | $\mu g/m^3$ | Xylene volatile organic compound | ~61% |
-| `AQI` | Float | Index (0–500+) | Official Indian Air Quality Index | ~16% |
-| `AQI_Bucket` | Categorical / String | N/A | CPCB standard classification bucket | ~16% |
+| Column Name | Data Type | Physical Unit | Description | Missing Count | % Missing |
+|---|---|---|---|---|---|
+| `City` | String / Object | N/A | Name of the Indian city | 0 | 0.00% |
+| `Date` | Date (`YYYY-MM-DD`) | N/A | Observation date (calendar day) | 0 | 0.00% |
+| `PM2.5` | Float64 | $\mu g/m^3$ | Fine particulate matter ($\le 2.5 \mu m$) | 4,598 | 15.57% |
+| `PM10` | Float64 | $\mu g/m^3$ | Respirable particulate matter ($\le 10 \mu m$) | 11,140 | 37.72% |
+| `NO` | Float64 | $\mu g/m^3$ | Nitric Oxide | 3,582 | 12.13% |
+| `NO2` | Float64 | $\mu g/m^3$ | Nitrogen Dioxide | 3,585 | 12.14% |
+| `NOx` | Float64 | $ppb$ / $\mu g/m^3$ | Nitrogen Oxides (total) | 4,185 | 14.17% |
+| `NH3` | Float64 | $\mu g/m^3$ | Ammonia | 10,328 | 34.97% |
+| `CO` | Float64 | $mg/m^3$ | Carbon Monoxide | 2,059 | 6.97% |
+| `SO2` | Float64 | $\mu g/m^3$ | Sulphur Dioxide | 3,854 | 13.05% |
+| `O3` | Float64 | $\mu g/m^3$ | Ground-level Ozone | 4,022 | 13.62% |
+| `Benzene` | Float64 | $\mu g/m^3$ | Benzene volatile organic compound | 5,623 | 19.04% |
+| `Toluene` | Float64 | $\mu g/m^3$ | Toluene volatile organic compound | 8,041 | 27.23% |
+| `Xylene` | Float64 | $\mu g/m^3$ | Xylene volatile organic compound | 18,109 | 61.32% |
+| `AQI` | Float64 | Index (0–500+) | Official Indian Air Quality Index | 4,681 | 15.85% |
+| `AQI_Bucket` | String / Object | N/A | CPCB standard classification bucket | 4,681 | 15.85% |
 
 ---
 

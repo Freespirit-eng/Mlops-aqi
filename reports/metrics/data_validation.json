@@ -1,5 +1,190 @@
 {
-  "passed": false,
-  "error": "File not found: C:\\Users\\Srijan Kumar G  S\\Desktop\\mlops\\data\\raw\\city_day.csv",
-  "validation_timestamp": "2026-10-13T23:22:41.147810"
+  "validation_timestamp": "2026-10-13T23:52:53.774958",
+  "total_rows": 29531,
+  "total_columns": 16,
+  "distinct_cities": 26,
+  "date_min": "2015-01-01",
+  "date_max": "2020-07-01",
+  "duplicate_city_date_pairs": 0,
+  "negative_pollutant_occurrences": {},
+  "column_missingness_percentage": {
+    "City": 0.0,
+    "Date": 0.0,
+    "PM2.5": 15.57,
+    "PM10": 37.72,
+    "NO": 12.13,
+    "NO2": 12.14,
+    "NOx": 14.17,
+    "NH3": 34.97,
+    "CO": 6.97,
+    "SO2": 13.05,
+    "O3": 13.62,
+    "Benzene": 19.04,
+    "Toluene": 27.23,
+    "Xylene": 61.32,
+    "AQI": 15.85,
+    "AQI_Bucket": 15.85
+  },
+  "target_aqi_missing_percentage": 15.85,
+  "city_breakdown": {
+    "Ahmedabad": {
+      "total_rows": 2009,
+      "min_date": "2015-01-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1334
+    },
+    "Aizawl": {
+      "total_rows": 113,
+      "min_date": "2020-03-11",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 111
+    },
+    "Amaravati": {
+      "total_rows": 951,
+      "min_date": "2017-11-24",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 841
+    },
+    "Amritsar": {
+      "total_rows": 1221,
+      "min_date": "2017-02-27",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1126
+    },
+    "Bengaluru": {
+      "total_rows": 2009,
+      "min_date": "2015-01-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1910
+    },
+    "Bhopal": {
+      "total_rows": 289,
+      "min_date": "2019-09-17",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 278
+    },
+    "Brajrajnagar": {
+      "total_rows": 938,
+      "min_date": "2017-12-07",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 713
+    },
+    "Chandigarh": {
+      "total_rows": 304,
+      "min_date": "2019-09-02",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 299
+    },
+    "Chennai": {
+      "total_rows": 2009,
+      "min_date": "2015-01-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1884
+    },
+    "Coimbatore": {
+      "total_rows": 386,
+      "min_date": "2019-06-12",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 344
+    },
+    "Delhi": {
+      "total_rows": 2009,
+      "min_date": "2015-01-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1999
+    },
+    "Ernakulam": {
+      "total_rows": 162,
+      "min_date": "2020-01-22",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 153
+    },
+    "Gurugram": {
+      "total_rows": 1679,
+      "min_date": "2015-11-27",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1453
+    },
+    "Guwahati": {
+      "total_rows": 502,
+      "min_date": "2019-02-16",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 495
+    },
+    "Hyderabad": {
+      "total_rows": 2006,
+      "min_date": "2015-01-04",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1880
+    },
+    "Jaipur": {
+      "total_rows": 1114,
+      "min_date": "2017-06-14",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1094
+    },
+    "Jorapokhar": {
+      "total_rows": 1169,
+      "min_date": "2017-04-20",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 771
+    },
+    "Kochi": {
+      "total_rows": 162,
+      "min_date": "2020-01-22",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 158
+    },
+    "Kolkata": {
+      "total_rows": 814,
+      "min_date": "2018-04-10",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 754
+    },
+    "Lucknow": {
+      "total_rows": 2009,
+      "min_date": "2015-01-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1893
+    },
+    "Mumbai": {
+      "total_rows": 2009,
+      "min_date": "2015-01-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 775
+    },
+    "Patna": {
+      "total_rows": 1858,
+      "min_date": "2015-06-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1459
+    },
+    "Shillong": {
+      "total_rows": 310,
+      "min_date": "2019-08-27",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 205
+    },
+    "Talcher": {
+      "total_rows": 925,
+      "min_date": "2017-12-20",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 698
+    },
+    "Thiruvananthapuram": {
+      "total_rows": 1112,
+      "min_date": "2017-06-16",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1052
+    },
+    "Visakhapatnam": {
+      "total_rows": 1462,
+      "min_date": "2016-07-01",
+      "max_date": "2020-07-01",
+      "aqi_available_rows": 1171
+    }
+  },
+  "warnings": [],
+  "errors": [],
+  "passed": true
 }

@@ -28,7 +28,7 @@ Milestone 1 focuses on foundational data engineering, reproducible pipelines (DV
 | **Originating Authority** | Central Pollution Control Board (CPCB), MoEFCC, India |
 | **Source URL** | https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india |
 | **License / Terms of Use** | CC0: Public Domain / Open Government Data (OGD) |
-| **Dataset Dimensions** | ~29,531 rows × 16 columns (~2.1 MB) |
+| **Dataset Dimensions** | 29,531 rows × 16 columns (2.57 MB / 2,574,056 bytes) |
 | **Temporal Coverage** | January 1, 2015 – July 1, 2020 (daily frequency) |
 | **Geographic Coverage** | 26 major Indian cities (including Bengaluru, Delhi, Mumbai, Chennai, etc.) |
 | **Target Variable(s)** | `AQI` (Continuous numeric) & `AQI_Bucket` (CPCB 6-class categorical) |
@@ -41,7 +41,7 @@ Milestone 1 focuses on foundational data engineering, reproducible pipelines (DV
 1. **Relevance to Indian National Standards:** The dataset directly contains CPCB-standard computed AQI values and buckets, ensuring our model aligns with official health guidance.
 2. **Realistic MLOps Challenges:** The dataset contains genuine real-world characteristics: missing values, sensor dropouts, city additions over time, and time-series autocorrelation.
 3. **Local Focus:** Includes continuous long-term monitoring for Bengaluru, serving as our primary regional evaluation spotlight.
-4. **Feasibility:** Lightweight (~2.1 MB) and structured, enabling fast, iterative local training, DVC remote pipeline execution, and MLflow logging on standard laptop hardware.
+4. **Feasibility:** Lightweight (~2.57 MB) and structured, enabling fast, iterative local training, DVC remote pipeline execution, and MLflow logging on standard laptop hardware.
 
 ---
 
