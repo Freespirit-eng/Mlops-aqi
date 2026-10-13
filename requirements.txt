@@ -1,0 +1,32 @@
+# Core Data Science and Manipulation
+pandas==2.2.2
+numpy==1.26.4
+pyarrow==16.1.0
+
+# Machine Learning and Modeling
+scikit-learn==1.5.0
+xgboost==2.0.3
+lightgbm==4.3.0
+joblib==1.4.2
+
+# Visualization
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# MLOps & Experiment Tracking
+mlflow==2.13.0
+dvc==3.51.0
+
+# Configuration & Utilities
+pyyaml==6.0.1
+tqdm==4.66.4
+
+# Quality, Formatting & Testing
+pytest==8.2.1
+ruff==0.4.7
+black==24.4.2
+pre-commit==3.7.1
+
+# Notebooks & Interactive Exploration
+jupyter==1.0.0
+ipykernel==6.29.4
